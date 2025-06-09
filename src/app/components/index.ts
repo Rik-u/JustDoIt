@@ -1,4 +1,5 @@
 export { default as CreateTaskButton } from "./CreateTaskButton"
+export { default as DeleteTaskButton } from "./DeleteTaskButton"
 export { default as Task } from "./Task"
 export { default as TaskList } from "./TaskList"
 export { default as TaskPage } from "./TaskPage"
