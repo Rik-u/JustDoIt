@@ -1,9 +1,7 @@
-import { CreateTaskButton } from "@/app/components";
+import { TaskPage } from "@/app/components";
 
 export default function Home() {
   return (
-    <div>
-      <CreateTaskButton />
-    </div>
+    <TaskPage />
   ); 
 }

@@ -1,11 +1,7 @@
 'use client';
 
-export default function CreateTaskButton() {
-    const createTask =() => {
-        console.log("Task created");
-    };
-
+export default function CreateTaskButton(props:{onclick:()=>void}) {
     return (
-        <button className="btn btn-circle absolute bottom-5 left-5 min-w-13 min-h-13 text-xl" onClick={createTask}>+</button>
+        <button className="btn btn-circle min-w-13 min-h-13 text-xl" onClick={props.onclick}>+</button>
     );
 }
