@@ -12,7 +12,7 @@ type Props = {
 export default function TaskList({ tasks, onClick }: Props) {
     return (
         <ul className="space-y-3">
-            {tasks.map(task => <Task key={task.id} id={task.id} onClick={onClick}/>)}
+            {tasks.map(task => <Task key={task.id} id={task.id} onClickDelete={onClick}/>)}
         </ul>
     );
 
