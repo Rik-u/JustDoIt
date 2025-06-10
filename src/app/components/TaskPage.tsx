@@ -17,7 +17,7 @@ export default function TaskPage() {
 
     return (
         <div>
-            <div className="max-w-50 mx-auto">
+            <div className="min-w-50 mx-auto p-3">
                 <TaskList tasks={tasks} onClick={deleteTask}/>
             </div>
             <div className="fixed bottom-5 left-5">

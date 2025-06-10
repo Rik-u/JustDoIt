@@ -18,11 +18,16 @@ export default function Task({ id, onClickDelete }: Props) {
 
     return (
         <li>
-            <div className="collapse bg-blue-400">
+            <div className="collapse collapse-arrow max-w-screen bg-blue-400">
                 <input type="checkbox" onChange={checkHandler}/>
-                <div className="collapse-title"><CheckmarkBox onClick={() => onClickDelete(id)}/> Test</div>
-                <div className="collapse-content">Test content</div>
-                {isOpen && <DeleteTaskButton onClick={() => onClickDelete(id)}/>}
+                <div className="collapse-title flex space-x-3">
+                    <CheckmarkBox onClick={() => onClickDelete(id)} /> 
+                    <input type="text" placeholder="What'chu doin" className="input input-ghost z-50 flex-grow" />
+                </div>
+                <div className="collapse-content">
+                    <input type="text" placeholder="Type here" className="input input-ghost z-50" />
+                    {isOpen && <DeleteTaskButton onClick={() => onClickDelete(id)} />}
+                </div>
             </div>
         </li>
     );
