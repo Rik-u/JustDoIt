@@ -3,7 +3,12 @@
 import { useState } from "react";
 import DeleteTaskButton from "./DeleteTaskButton"
 
-export default function Task() {
+type Props = {
+    id: number;
+    onClick: (id: number) => void;
+};
+
+export default function Task({ id, onClick }: Props) {
     const [isOpen, setIsOpen] = useState(false);
 
     const checkHandler = () => {
@@ -16,7 +21,7 @@ export default function Task() {
                 <input type="checkbox" onChange={checkHandler}/>
                 <div className="collapse-title">Test</div>
                 <div className="collapse-content">Test content</div>
-                {isOpen && <DeleteTaskButton />}
+                {isOpen && <DeleteTaskButton onClick={() => onClick(id)}/>}
             </div>
         </li>
     );

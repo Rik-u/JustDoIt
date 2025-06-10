@@ -1,13 +1,18 @@
-import { JSX } from "react";
+import Task from "./Task";
+
+type TaskType = {
+    id: number;
+};
 
 type Props = {
-    tasks: JSX.Element[];
-  };
+    tasks: TaskType[];
+    onClick: (id: number) => void
+};
 
-export default function TaskList({ tasks }: Props) {
+export default function TaskList({ tasks, onClick }: Props) {
     return (
         <ul className="space-y-3">
-            {tasks.map((task) => task)}
+            {tasks.map(task => <Task key={task.id} id={task.id} onClick={onClick}/>)}
         </ul>
     );
 

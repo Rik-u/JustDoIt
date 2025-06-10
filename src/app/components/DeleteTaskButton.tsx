@@ -1,7 +1,11 @@
 import Image from "next/image";
 
-export default function DeleteTaskButton() {
+type Props = {
+    onClick : () => void;
+};
+
+export default function DeleteTaskButton({ onClick }: Props) {
     return (
-        <button className="btn btn-ghost hover:bg-red-400 absolute right-3 inset-y-1/2"><Image src="trash-can.svg" fill={true} alt="Delete Icon"></Image></button>
+        <button className="btn btn-ghost hover:bg-red-400 absolute right-3 inset-y-1/2" onClick={onClick}><Image src="trash-can.svg" fill={true} alt="Delete Icon"></Image></button>
     );
 }
