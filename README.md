@@ -40,3 +40,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 Node.js + npm
 Next.js (Frontend + Backend)
 Tailwind + DaisyUI (Styling)
+
+must npm install after cloning

@@ -1,6 +1,6 @@
 'use client';   
 
-import { CreateTaskButton , Task, TaskList } from "@/app/components";
+import { CreateTaskButton , TaskList } from "@/app/components";
 import { useState } from "react";
 
 export default function TaskPage() {
